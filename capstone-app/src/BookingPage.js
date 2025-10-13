@@ -1,12 +1,15 @@
-import react from 'react';
+import React from "react";
 
-function BookingPage() {
+const ConfirmedBooking = () => {
     return(
-        <div id="bookingpage">
-            <h1>Booking Page</h1>
-            <h2>Thanks for your reservation! See you on...</h2>
+        <div className="comfirm">
+            <div>
+            <h1>Booking has been <span>confirmed!</span>
+        </h1>
+            </div>
         </div>
+
     )
 }
 
-export default BookingPage;
+export default ConfirmedBooking;

@@ -4,7 +4,6 @@ function AboutUs() {
   return (
     <div id="aboutus">
       <div>
-        <img src="/littlelemonpnglogo.png" width={500} alt="Little Lemon Logo" />
         <h1>About Us</h1>
         <h2>Chicago: Our Story</h2>
         <p className="lead-text">

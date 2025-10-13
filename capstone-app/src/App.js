@@ -1,26 +1,36 @@
 import React from 'react';
 import './App.css';
-import AboutUs from './aboutUs';
+import Main from './Main';
+import navBar from './NavBar';
+import Footer from './Footer';
+import Header from './Header';
+import DMenu from './Menu';
+import AboutUs from './AboutUs';
 import LogIn from './LogIn';
-import Payment from './PayMent';
 import BookingForm from './BookingForm';
-import BookingPage from './BookingPage';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NavBar from './navBar';
+import homePage from './homePage';
 
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
-      <NavBar />
+    <div className="App">
+      <navBar />
       <Routes>
-        <Route path="/" element={<homePage />} />
+        <Route path="/" element={<Header />} />
+        <Route path="/homePage" element={<homePage />} />
         <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/dishMenu" element={<DMenu />} />
         <Route path="/BookingForm" element={<BookingForm />} />
         <Route path="/LogIn" element={<LogIn />} />
+        <Route path="/booking" element={<Main />} />
       </Routes>
-    </Router>
-    );
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
+
+
+
