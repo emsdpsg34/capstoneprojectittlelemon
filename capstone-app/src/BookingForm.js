@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -33,7 +34,7 @@ const BookingForm = (props) => {
               <label htmlFor="book-time">Choose Time:</label>
               <select id="book-time" value={times} onChange={(e) => setTimes(e.target.value)} required>
                 <option value="">Select a Time</option>
-               {props.availableTimes.availableTimes.map(availableTimes => {return <option key={availableTimes}>{availableTimes}</option>})}
+               {props.availableTimes.availableTimes.map(time => {return <option key={time}>{time}</option>})}
               </select>
             </div>
             <div>
@@ -46,10 +47,12 @@ const BookingForm = (props) => {
                 <option value="">Select an Option</option>
                 <option>Birthday</option>
                 <option>Anniversary</option>
+                <option>Family meeting</option>
+                <option>Colleagues meeting</option>
               </select>
             </div>
             <div className="btnReceive">
-              <input aria-label="On Click" type={"submit"} value={"Make Your Reservation"}></input>
+             <Link to="/Confirmed"><input aria-label="On Click" type={"submit"} value={"Make Your Reservation"}></input> </Link>
             </div>
           </fieldset>
         </form>

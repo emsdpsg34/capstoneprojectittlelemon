@@ -1,6 +1,7 @@
 import React from "react";
-import recipes from "../recipes";
+import recipes from "./recipes";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
 //   console.log(recipes[0]);
@@ -53,6 +54,9 @@ const handleOrder = (id) => {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+        <Link to="/CheckOut"><input aria-label="OnClick" type={"submit"} value={"Proceed to CheckOut"}/></Link>
       </div>
     </div>
   );

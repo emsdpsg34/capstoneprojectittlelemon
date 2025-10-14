@@ -2,7 +2,7 @@ import React from "react";
 
 function AboutUs() {
   return (
-    <div id="aboutus">
+    <div className="aboutus" id="aboutus">
       <div>
         <h1>About Us</h1>
         <h2>Chicago: Our Story</h2>
@@ -12,6 +12,10 @@ function AboutUs() {
         <p className="lead-text">
           To craft the menu, Mario relies on his experience as a chef in Italy and family recipes, while Adrian is in charge of the restaurant's marketing.
         </p>
+        <a>
+          <img src="mario-and-adrian.jpg" />
+          <p className="owners">The owners: Mario and Adrian.</p>
+        </a>
       </div>
     </div>
   );
