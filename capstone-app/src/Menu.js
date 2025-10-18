@@ -56,7 +56,7 @@ const handleOrder = (id) => {
         ))}
       </div>
       <div>
-        <Link to="/CheckOut"><input aria-label="OnClick" type={"submit"} value={"Proceed to CheckOut"}/></Link>
+        <Link to="/CheckOut"><input aria-label="OnClick" type={"submit"} value={"Proceed to CheckOut"} className="p-co-btn" /></Link>
       </div>
     </div>
   );

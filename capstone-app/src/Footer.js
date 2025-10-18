@@ -1,44 +1,115 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import { FC, HTMLAttributes } from "react";
+import { HashLink } from "react-router-hash-link";
+import { Container, Content, Copyright, Column, Image } from "./styles";
+import restaurant from "../../assets/restaurant.jpg";
 
-const Footer = () => {
-    return(
-        <footer className="footer">
-            <section>
-            <div className="company-info">
-                <img src="/littlelemonpnglogo.png" alt="Little Lemon Logo" className="footer-logo"/>
-                <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-            </div>
-            <div>
-                <h3>Important Links</h3>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/aboutUs">About</Link></li>
-                <li><Link to="/dishMenu">Menu</Link></li>
-                <li><Link to="/BookingForm">Reservations</Link></li>
-                <li><Link to="/booking">Booking</Link></li>
-                <li><Link to="/LogIn">Login</Link></li>
-            </ul>
-            </div>
-            <div>
-                <h3>Contact</h3>
-            <ul>
-            <li>Address: <br/> 123 Town Street, Chicago</li>
-                <li>Phone: <br/> +00 123 456 789</li>
-                <li>Email: <br/> little@lemon.com</li>
-            </ul>
-            </div>
-            <div>
-                <h3>Social Media Links</h3>
-            <ul>
-                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-            </ul>
-            </div>
-            </section>
-        </footer>
-    )
-}
+const Footer: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
+  return (
+    <Container {...props}>
+      <Content>
+        <Image src={restaurant} alt="Restaurant Food" />
+        <Column>
+          <h4>
+            Little
+            <br />
+            Lemon
+          </h4>
+          <ul>
+            <li>
+              {" "}
+              <HashLink to="/">Home</HashLink>{" "}
+            </li>
+            <li>
+              {" "}
+              <HashLink to="/#">Menu</HashLink>{" "}
+            </li>
+            <li>
+              {" "}
+              <HashLink to="/bookings">Reservations</HashLink>{" "}
+            </li>
+            <li>
+              {" "}
+              <HashLink to="/#">Order Online</HashLink>{" "}
+            </li>
+            <li>
+              {" "}
+              <HashLink to="/#">Login</HashLink>{" "}
+            </li>
+          </ul>
+        </Column>
+        <Column>
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <address>
+                Little Lemon <br />
+                331 E Chicago <br />
+                LaSalle Street Chicago,
+                <br />
+                Illinois 60602 <br />
+                USA
+              </address>
+            </li>
+            <li>
+              {" "}
+              <a href="tel:+551199999999" target="_blank" rel="external">
+                +55 11 9999-9999
+              </a>{" "}
+            </li>
+            <li>
+              {" "}
+              <a
+                href="mailto:contact@littlelemon.com"
+                target="_blank"
+                rel="external"
+              >
+                contact@littlelemon.com
+              </a>{" "}
+            </li>
+          </ul>
+        </Column>
+        <Column>
+          <h4>Social Media</h4>
+          <ul>
+            <li>
+              {" "}
+              <a
+                href="https://www.facebook.com/littlelemon"
+                target="_blank"
+                rel="external"
+              >
+                Facebook
+              </a>{" "}
+            </li>
+            <li>
+              {" "}
+              <a
+                href="https://www.instagram.com/littlelemon"
+                target="_blank"
+                rel="external"
+              >
+                Instagram
+              </a>{" "}
+            </li>
+            <li>
+              {" "}
+              <a
+                href="https://twitter.com/littlelemon"
+                target="_blank"
+                rel="external"
+              >
+                Twitter
+              </a>{" "}
+            </li>
+          </ul>
+        </Column>
+      </Content>
+      <Copyright>
+        <span>Developed by Abdullah Iqbal.</span>
+        <p>© 2023 Little Lemon. All rights reserved.</p>
+      </Copyright>
+    </Container>
+  );
+};
 
 export default Footer;

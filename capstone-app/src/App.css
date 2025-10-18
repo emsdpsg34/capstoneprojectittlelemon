@@ -251,10 +251,16 @@ footer ul li{
 
 .loginform {
   background-color: #495e57;
+  color: whitesmoke;
+  font-size: medium;
+  font-weight: bold;
 }
 
 .sign-up {
   background-color: #495e57;
+  color: whitesmoke;
+  font-size: medium;
+  font-weight: bold;
 }
 
 footer ul li:hover{
@@ -273,6 +279,37 @@ footer ul li:hover{
 
 .order-confirmed {
   background-color: #495e57;
+}
+
+.lead-text {
+  font-weight: bolder;
+}
+
+.check-out {
+  background-color: #495e57;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.p-co-btn {
+  background-color: #827430;
+  border-radius: 60px;
+  padding: 30px;
+}
+
+.p-co-btn:hover {
+  background-color:#F4CE14;
+}
+
+.confirmorder {
+  background-color: #827430;
+  border-radius: 60px;
+  padding: 30px;
+}
+
+.confirmorder:hover {
+  background-color: #F4CE14;
 }
 
 @media screen and (max-width: 768px){
