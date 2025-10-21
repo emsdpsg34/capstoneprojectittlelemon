@@ -1,7 +1,7 @@
 import { useEffect, FC, HTMLAttributes, Dispatch } from "react";
 import { Container, Top, Form, FormMessageError } from "./styles";
 import { useNavigate, NavigateFunction } from "react-router-dom";
-import { submitAPI } from "../../utils/temp";
+import { submitAPI } from "./utils/temp";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 

@@ -1,114 +1,78 @@
-import { FC, HTMLAttributes } from "react";
-import { HashLink } from "react-router-hash-link";
-import { Container, Content, Copyright, Column, Image } from "./styles";
-import restaurant from "../../assets/restaurant.jpg";
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Footer.css";
 
-const Footer: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
+const Footer = () => {
   return (
-    <Container {...props}>
-      <Content>
-        <Image src={restaurant} alt="Restaurant Food" />
-        <Column>
-          <h4>
-            Little
-            <br />
-            Lemon
-          </h4>
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-logo">
+          <img src="/footerlogo.jpg" alt="Little Lemon Logo" />
+        </div>
+        
+        <div className="footer-section">
+          <h4>Navigation</h4>
           <ul>
-            <li>
-              {" "}
-              <HashLink to="/">Home</HashLink>{" "}
-            </li>
-            <li>
-              {" "}
-              <HashLink to="/#">Menu</HashLink>{" "}
-            </li>
-            <li>
-              {" "}
-              <HashLink to="/bookings">Reservations</HashLink>{" "}
-            </li>
-            <li>
-              {" "}
-              <HashLink to="/#">Order Online</HashLink>{" "}
-            </li>
-            <li>
-              {" "}
-              <HashLink to="/#">Login</HashLink>{" "}
-            </li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/menu">Menu</Link></li>
+            <li><Link to="/bookings">Reservations</Link></li>
+            <li><Link to="/login">Login</Link></li>
           </ul>
-        </Column>
-        <Column>
+        </div>
+        
+        <div className="footer-section">
           <h4>Contact</h4>
           <ul>
             <li>
               <address>
-                Little Lemon <br />
-                331 E Chicago <br />
-                LaSalle Street Chicago,
-                <br />
-                Illinois 60602 <br />
+                Little Lemon<br />
+                331 E Chicago<br />
+                LaSalle Street Chicago,<br />
+                Illinois 60602<br />
                 USA
               </address>
             </li>
             <li>
-              {" "}
-              <a href="tel:+551199999999" target="_blank" rel="external">
-                +55 11 9999-9999
-              </a>{" "}
+              <a href="tel:+1-312-555-0123">
+                +1 (312) 555-0123
+              </a>
             </li>
             <li>
-              {" "}
-              <a
-                href="mailto:contact@littlelemon.com"
-                target="_blank"
-                rel="external"
-              >
+              <a href="mailto:contact@littlelemon.com">
                 contact@littlelemon.com
-              </a>{" "}
+              </a>
             </li>
           </ul>
-        </Column>
-        <Column>
+        </div>
+        
+        <div className="footer-section">
           <h4>Social Media</h4>
           <ul>
             <li>
-              {" "}
-              <a
-                href="https://www.facebook.com/littlelemon"
-                target="_blank"
-                rel="external"
-              >
+              <a href="https://www.facebook.com/littlelemon" target="_blank" rel="noopener noreferrer">
                 Facebook
-              </a>{" "}
+              </a>
             </li>
             <li>
-              {" "}
-              <a
-                href="https://www.instagram.com/littlelemon"
-                target="_blank"
-                rel="external"
-              >
+              <a href="https://www.instagram.com/littlelemon" target="_blank" rel="noopener noreferrer">
                 Instagram
-              </a>{" "}
+              </a>
             </li>
             <li>
-              {" "}
-              <a
-                href="https://twitter.com/littlelemon"
-                target="_blank"
-                rel="external"
-              >
+              <a href="https://twitter.com/littlelemon" target="_blank" rel="noopener noreferrer">
                 Twitter
-              </a>{" "}
+              </a>
             </li>
           </ul>
-        </Column>
-      </Content>
-      <Copyright>
-        <span>Developed by Abdullah Iqbal.</span>
-        <p>© 2023 Little Lemon. All rights reserved.</p>
-      </Copyright>
-    </Container>
+        </div>
+      </div>
+      
+      <div className="footer-bottom">
+        <p>© 2024 Little Lemon. All rights reserved.</p>
+        <p>Developed with ❤️ for the Little Lemon family</p>
+      </div>
+    </footer>
   );
 };
 
