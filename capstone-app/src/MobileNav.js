@@ -1,11 +1,11 @@
-import { useState, FC, HTMLAttributes } from "react";
+import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Container, Menu } from "./styles";
 import menuImg from "../../assets/icon _hamburger_menu.svg";
 import basketImg from "../../assets/basket.svg";
 
 
-const MobileNav: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
+const MobileNav = (props) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenu = () => {

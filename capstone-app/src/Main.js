@@ -6,7 +6,7 @@ import theme from "./styles/theme";
 import { BrowserRouter } from "react-router-dom";
 import Routes from "./routes";
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter basename="/little-lemon">
       <ThemeProvider theme={theme}>

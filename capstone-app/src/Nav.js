@@ -1,9 +1,8 @@
-import { FC, HTMLAttributes } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Container } from "./styles";
 import basketImg from "../../assets/basket.svg";
 
-const Nav: FC<HTMLAttributes<HTMLElement>> = (props): JSX.Element => {
+const Nav = (props) => {
   return (
     <Container {...props}>
         <ul>

@@ -20,7 +20,7 @@ const HomePage = () => {
             </Link>
           </div>
           <div className="hero-image">
-            <img src="/Mario_and_Adrian_B.jpg" alt="Chefs Mario and Adrian" />
+            <img src="/dishnumber2.jpg" alt="One of our delicious dishes" />
           </div>
         </div>
       </section>
@@ -81,13 +81,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="about" id="about">
-        <div className="container">
-          <div className="about-content">
-            <div className="about-text">
-              <h2>Little Lemon</h2>
-              <h3>Chicago</h3>
+<div className="story-section">
+            <div className="story-text">
+              <h2>Our Story</h2>
               <p>
                 Little Lemon is owned by two Italian brothers, Mario and Adrian, who moved 
                 to the United States to pursue their shared dream of owning a restaurant.
@@ -98,15 +94,38 @@ const HomePage = () => {
                 effort to expand the menu beyond classic Italian to incorporate additional 
                 cuisines from the Mediterranean region.
               </p>
+              <p>
+                The restaurant draws inspiration from the vibrant flavors of the Mediterranean, 
+                offering a diverse menu that celebrates the rich culinary traditions of Italy, 
+                Greece, Spain, and beyond.
+              </p>
             </div>
-            <div className="about-images">
-              <img src="/Mario_and_Adrian_B.jpg" alt="Mario and Adrian" className="about-img-1" />
-              <img src="/restaurant chef B.jpg" alt="Restaurant Chef" className="about-img-2" />
+            <div className="story-images">
+              <img src="/Mario_and_Adrian_B.jpg" alt="Mario and Adrian" className="main-image" />
+              <img src="/restaurant chef B.jpg" alt="Restaurant Chef" className="secondary-image" />
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+
+          <div className="values-section">
+            <h2>Our Values</h2>
+            <div className="values-grid">
+              <div className="value-card">
+                <h3>Fresh Ingredients</h3>
+                <p>We source the finest, freshest ingredients to create authentic Mediterranean flavors.</p>
+              </div>
+              <div className="value-card">
+                <h3>Family Tradition</h3>
+                <p>Our recipes are passed down through generations, preserving authentic cooking methods.</p>
+              </div>
+              <div className="value-card">
+                <h3>Community Focus</h3>
+                <p>We're proud to be part of the Chicago community and serve our neighbors with pride.</p>
+              </div>
+            </div>
+          </div>
+
+
+</div>
   );
 };
 

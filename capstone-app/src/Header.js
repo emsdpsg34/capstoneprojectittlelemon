@@ -28,7 +28,6 @@ const Header = () => {
             Order Online
           </Link>
         </div>
-
         <div className="menu-icon" onClick={toggleMenu}>
           <div className="bar"></div>
           <div className="bar"></div>

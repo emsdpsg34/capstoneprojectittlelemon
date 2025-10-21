@@ -11,14 +11,14 @@ const recipes = [
     title: "Bruschetta",
     price: 5.99,
     description: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
-    image: "/dishnumber2.jpg"
+    image: "/dishnumber5.jpg"
   },
   {
     id: 3,
     title: "Grilled Fish",
     price: 20.00,
     description: "Our fish is grilled with fresh herbs and served with seasonal vegetables and lemon butter sauce.",
-    image: "/dishnumber5.jpg"
+    image: "/dishnumber3.jpg"
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const recipes = [
     title: "Mediterranean Pasta",
     price: 15.99,
     description: "Fresh pasta with Mediterranean vegetables, olives, and our house-made tomato sauce.",
-    image: "/f21897ecfdee7d5927d1ec7b61408485ab9f6838.jpg"
+    image: "/dishnummber4.jpg"
   },
   {
     id: 6,

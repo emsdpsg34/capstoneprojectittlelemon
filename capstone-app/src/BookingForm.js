@@ -1,19 +1,12 @@
-import { useEffect, FC, HTMLAttributes, Dispatch } from "react";
+import { useEffect } from "react";
 import { Container, Top, Form, FormMessageError } from "./styles";
-import { useNavigate, NavigateFunction } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { submitAPI } from "./utils/temp";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-interface BookingFormProps extends HTMLAttributes<HTMLDivElement> {
-  dispatch: Dispatch<{ type: string, date: Date }>;
-  availableTimes: {
-    times: string[];
-  };
-};
-
-const BookingForm: FC<BookingFormProps> = ({ availableTimes, dispatch, ...props }): JSX.Element => {
-  const navigate: NavigateFunction = useNavigate();
+const BookingForm = ({ availableTimes, dispatch, ...props }) => {
+  const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: {
@@ -23,7 +16,7 @@ const BookingForm: FC<BookingFormProps> = ({ availableTimes, dispatch, ...props 
       occasion: "birthday",
     },
     onSubmit: (values) => {
-      const response: boolean = submitAPI(values);
+      const response = submitAPI(values);
       if (response) {
         localStorage.setItem("Bookings", JSON.stringify(values));
         navigate("/confirmation");

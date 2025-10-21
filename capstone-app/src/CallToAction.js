@@ -1,11 +1,11 @@
-import { FC } from "react";
 import Button from "../Button";
-import { useNavigate, NavigateFunction } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Container, Content, Image } from "./styles";
+import dishnumber2 from "../dishnumber2.jpg";
 
 
-const CallToAction: FC = ():  JSX.Element => {
-  const navigate: NavigateFunction = useNavigate();
+const CallToAction = () => {
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -18,7 +18,7 @@ const CallToAction: FC = ():  JSX.Element => {
         <Button onClick={() => navigate("/bookings")} aria-label="Go to reservation table page.">Reserve a Table</Button>
       </Content>
       <Image>
-        <img src={dishnumber2.jpg} alt="Restaurant Food" />
+        <img src={dishnumber2} alt="Restaurant Food" />
       </Image>
     </Container>
   );
