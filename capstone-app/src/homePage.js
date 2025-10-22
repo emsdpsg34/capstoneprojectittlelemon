@@ -64,7 +64,7 @@ const HomePage = () => {
             </div>
             
             <div className="special-card">
-              <img src="/dishnumber5.jpg" alt="Grilled Fish" />
+              <img src="/dishnumber3.jpg" alt="Grilled Fish" />
               <div className="card-content">
                 <div className="card-header">
                   <h3>Grilled Fish</h3>
